@@ -1,0 +1,48 @@
+﻿@model ChallengeSprint2.Models.Avaliacoes
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Avaliacoes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Comentario" class="control-label"></label>
+                <input asp-for="Comentario" class="form-control" />
+                <span asp-validation-for="Comentario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NotaAvaliacao" class="control-label"></label>
+                <input asp-for="NotaAvaliacao" class="form-control" />
+                <span asp-validation-for="NotaAvaliacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataAvaliacao" class="control-label"></label>
+                <input asp-for="DataAvaliacao" class="form-control" />
+                <span asp-validation-for="DataAvaliacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StatusAvaliacao" class="control-label"></label>
+                <input asp-for="StatusAvaliacao" class="form-control" />
+                <span asp-validation-for="StatusAvaliacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
